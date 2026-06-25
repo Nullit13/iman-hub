@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import athkarData from "../azkar.json";
-import "../styles/athkar.css";
+import "../styles/Athkar.css";
 
 function useAthkar() {
   const [categories, setCategories] = useState([]);

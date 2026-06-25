@@ -14,7 +14,7 @@ import {
   FaHeart,
   FaGithub
 } from 'react-icons/fa';
-import GitHubBadge from "../GitHubBadge";
+import GitHubBadge from "../Githubbadge";
 import "../styles/home.css";
 
 const FEATURES = [
