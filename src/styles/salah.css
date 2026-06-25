@@ -1,0 +1,849 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg:        #080F0B;
+  --bg-2:      #0B1F14;
+  --bg-3:      #112A1C;
+  --bg-4:      #163320;
+  --green:     #1A7A50;
+  --green-g:   #22A86E;
+  --gold:      #D4A843;
+  --gold-l:    #F0C870;
+  --gold-dim:  rgba(212, 168, 67, 0.12);
+  --border:    rgba(212, 168, 67, 0.14);
+  --border-2:  rgba(212, 168, 67, 0.30);
+  --text:      #EEF4F0;
+  --text-2:    #A8C4B2;
+  --text-3:    #5A7A66;
+  --radius:    16px;
+  --radius-sm: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.sl {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  padding-top: 68px;
+  padding-bottom: 100px;
+}
+
+/* ── Hero ───────────────────────────────────────── */
+
+.sl__hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 28px 64px;
+  text-align: center;
+}
+
+.sl__hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.sl__hero-orb--1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(26,122,80,0.45) 0%, transparent 70%);
+  top: -160px;
+  left: -120px;
+}
+
+.sl__hero-orb--2 {
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(212,168,67,0.22) 0%, transparent 70%);
+  bottom: -80px;
+  right: -80px;
+}
+
+.sl__hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212,168,67,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,168,67,0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 100% at 50% 50%, black 20%, transparent 100%);
+  pointer-events: none;
+}
+
+.sl__hero-content {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.sl__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.sl__hero-title {
+  font-family: "Amiri", Georgia, serif;
+  font-size: clamp(48px, 8vw, 88px);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.05;
+  margin-bottom: 10px;
+  direction: rtl;
+}
+
+.sl__hero-date {
+  font-size: 14px;
+  color: var(--text-3);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* ── Hijri date ─────────────────────────────────── */
+
+.sl__hijri {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold-dim);
+  border: 1px solid var(--border-2);
+  border-radius: 999px;
+  padding: 8px 22px;
+  margin-bottom: 40px;
+  direction: rtl;
+}
+
+.sl__hijri-day {
+  font-family: "Amiri", Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.sl__hijri-month {
+  font-family: "Amiri", Georgia, serif;
+  font-size: 18px;
+  color: var(--gold-l);
+}
+
+.sl__hijri-year {
+  font-size: 14px;
+  color: var(--text-3);
+  font-weight: 600;
+}
+
+/* ── Location form ──────────────────────────────── */
+
+.sl__location-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.sl__location-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.sl__location-inputs .sl__select {
+  grid-column: 1 / -1;
+}
+
+.sl__input {
+  width: 100%;
+  padding: 13px 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.sl__input::placeholder {
+  color: var(--text-3);
+}
+
+.sl__input:focus {
+  border-color: var(--gold);
+  background: rgba(255,255,255,0.07);
+}
+
+.sl__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23D4A843' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-color: rgba(255,255,255,0.05);
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.sl__location-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.sl__btn {
+  flex: 1;
+  padding: 13px 20px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.sl__btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.sl__btn--gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-l) 100%);
+  color: #0B1F14;
+  box-shadow: 0 4px 20px rgba(212,168,67,0.3);
+}
+
+.sl__btn--gold:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(212,168,67,0.45);
+}
+
+.sl__btn--ghost {
+  background: rgba(255,255,255,0.06);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+}
+
+.sl__btn--ghost:hover:not(:disabled) {
+  background: rgba(255,255,255,0.1);
+  color: var(--text);
+}
+
+.sl__error {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #e07070;
+  font-weight: 500;
+}
+
+/* ── Next prayer banner ─────────────────────────── */
+
+.sl__next-banner {
+  background: linear-gradient(135deg, var(--bg-3) 0%, rgba(26,122,80,0.2) 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 28px;
+}
+
+.sl__next-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sl__next-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sl__next-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.sl__next-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 4px;
+}
+
+.sl__next-name {
+  font-family: "Amiri", Georgia, serif;
+  font-size: 22px;
+  color: var(--gold-l);
+}
+
+.sl__next-right {
+  text-align: right;
+}
+
+.sl__next-time {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.sl__next-countdown {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green-g);
+}
+
+/* ── Main layout ────────────────────────────────── */
+
+.sl__main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 28px 0;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .sl__main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Section header ─────────────────────────────── */
+
+.sl__section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sl__section-title {
+  font-family: "Amiri", Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.sl__section-sub {
+  font-size: 13px;
+  color: var(--text-3);
+  margin-top: 4px;
+}
+
+.sl__monthly-btn {
+  padding: 9px 18px;
+  background: var(--gold-dim);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-sm);
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  transition: background 0.18s;
+  white-space: nowrap;
+}
+
+.sl__monthly-btn:hover {
+  background: rgba(212,168,67,0.2);
+}
+
+/* ── Prayer cards grid ──────────────────────────── */
+
+.sl__prayers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 700px) {
+  .sl__prayers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 440px) {
+  .sl__prayers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sl__prayer-card {
+  position: relative;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.22s, transform 0.22s, background 0.22s;
+  overflow: hidden;
+}
+
+.sl__prayer-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: transparent;
+  border-radius: var(--radius) var(--radius) 0 0;
+  transition: background 0.22s;
+}
+
+.sl__prayer-card:hover {
+  border-color: var(--border-2);
+  transform: translateY(-3px);
+}
+
+.sl__prayer-card--current {
+  background: linear-gradient(160deg, #0f2e1c 0%, #112d1b 100%);
+  border-color: var(--green-g);
+}
+
+.sl__prayer-card--current::before {
+  background: linear-gradient(90deg, var(--green) 0%, var(--green-g) 100%);
+}
+
+.sl__prayer-card--next {
+  background: linear-gradient(160deg, #2a1e08 0%, #241a07 100%);
+  border-color: var(--gold);
+}
+
+.sl__prayer-card--next::before {
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-l) 100%);
+}
+
+.sl__prayer-card--past {
+  opacity: 0.55;
+}
+
+.sl__prayer-card--info {
+  background: var(--bg-3);
+  border-style: dashed;
+}
+
+.sl__prayer-next-tag,
+.sl__prayer-now-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.sl__prayer-next-tag {
+  background: var(--gold-dim);
+  color: var(--gold);
+  border: 1px solid var(--border-2);
+}
+
+.sl__prayer-now-tag {
+  background: rgba(34,168,110,0.15);
+  color: var(--green-g);
+  border: 1px solid rgba(34,168,110,0.3);
+}
+
+.sl__prayer-icon {
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.sl__prayer-names {
+  flex: 1;
+}
+
+.sl__prayer-arabic {
+  font-family: "Amiri", Georgia, serif;
+  font-size: 22px;
+  color: var(--gold-l);
+  direction: rtl;
+  margin-bottom: 2px;
+}
+
+.sl__prayer-english {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.sl__prayer-desc {
+  font-size: 11px;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+.sl__prayer-time {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+.sl__prayer-time-main {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.sl__prayer-time-24 {
+  font-size: 11px;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+/* ── Side cards ─────────────────────────────────── */
+
+.sl__side {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: sticky;
+  top: 130px;
+}
+
+.sl__card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-2);
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+}
+
+/* ── Qibla compass ──────────────────────────────── */
+
+.sl__qibla-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  text-align: center;
+}
+
+.sl__qibla-compass {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 18px;
+}
+
+.sl__compass-ring {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #163320, #0B1F14);
+  border: 2px solid var(--border-2);
+  box-shadow: 0 0 30px rgba(212,168,67,0.1), inset 0 0 30px rgba(0,0,0,0.4);
+}
+
+.sl__compass-n,
+.sl__compass-s,
+.sl__compass-e,
+.sl__compass-w {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-3);
+  letter-spacing: 0.5px;
+}
+
+.sl__compass-n { top: 6px;  left: 50%; transform: translateX(-50%); color: var(--gold); }
+.sl__compass-s { bottom: 6px; left: 50%; transform: translateX(-50%); }
+.sl__compass-e { right: 8px; top: 50%; transform: translateY(-50%); }
+.sl__compass-w { left: 8px;  top: 50%; transform: translateY(-50%); }
+
+.sl__compass-needle {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 4px;
+  height: 120px;
+  margin-left: -2px;
+  margin-top: -60px;
+  transform-origin: center center;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.sl__needle-tip {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 52px solid var(--gold);
+  margin-left: -3px;
+  margin-top: 2px;
+  filter: drop-shadow(0 0 6px rgba(212,168,67,0.6));
+}
+
+.sl__needle-tail {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 52px solid var(--bg-3);
+  margin-left: -3px;
+  margin-top: 4px;
+}
+
+.sl__compass-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(212,168,67,0.7);
+  z-index: 2;
+}
+
+.sl__qibla-angle {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.sl__qibla-sub {
+  font-size: 12px;
+  color: var(--text-3);
+  line-height: 1.5;
+}
+
+/* ── Extra cards ────────────────────────────────── */
+
+.sl__extra-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.sl__extra-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sl__extra-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sl__extra-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sl__extra-label {
+  font-size: 13px;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+.sl__extra-time {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sl__extra-time--sm {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: right;
+  max-width: 160px;
+  color: var(--text-2);
+}
+
+/* ── Monthly table ──────────────────────────────── */
+
+.sl__monthly {
+  max-width: 1200px;
+  margin: 36px auto 0;
+  padding: 0 28px;
+}
+
+.sl__monthly-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sl__close-btn {
+  padding: 9px 18px;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-3);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  transition: color 0.18s, border-color 0.18s;
+}
+
+.sl__close-btn:hover {
+  color: var(--text);
+  border-color: var(--border-2);
+}
+
+.sl__monthly-table-wrap {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: auto;
+}
+
+.sl__monthly-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.sl__monthly-table thead {
+  background: var(--bg-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.sl__monthly-table th {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-3);
+}
+
+.sl__monthly-table td {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.sl__monthly-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.sl__monthly-table tbody tr:hover td {
+  background: rgba(255,255,255,0.02);
+  color: var(--text);
+}
+
+.sl__monthly-today td {
+  background: var(--gold-dim) !important;
+  color: var(--gold) !important;
+  font-weight: 700 !important;
+}
+
+.sl__monthly-day {
+  font-weight: 700;
+  color: var(--text);
+  margin-right: 6px;
+}
+
+.sl__monthly-weekday {
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+/* ── Empty state ────────────────────────────────── */
+
+.sl__empty {
+  text-align: center;
+  padding: 100px 28px;
+}
+
+.sl__empty-icon {
+  font-size: 72px;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.sl__empty-title {
+  font-family: "Amiri", Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.sl__empty-sub {
+  font-size: 15px;
+  color: var(--text-3);
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Mobile ─────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .sl__hero {
+    padding: 52px 18px 48px;
+  }
+
+  .sl__location-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .sl__location-inputs .sl__select {
+    grid-column: 1;
+  }
+
+  .sl__location-btns {
+    flex-direction: column;
+  }
+
+  .sl__next-banner {
+    padding: 16px 18px;
+  }
+
+  .sl__main {
+    padding: 24px 18px 0;
+  }
+
+  .sl__monthly {
+    padding: 0 18px;
+  }
+
+  .sl__side {
+    position: static;
+  }
+}

@@ -1,0 +1,432 @@
+.athkar {
+    background: var(--bg, #080F0B);
+    color: var(--text, #EEF4F0);
+    font-family: "Inter", system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .athkar__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+  
+  .athkar__hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 28px 60px;
+    overflow: hidden;
+    min-height: 40vh;
+  }
+  
+  .athkar__hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  
+  .athkar__hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.55;
+  }
+  
+  .athkar__hero-orb--1 {
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, #1A7A50 0%, transparent 70%);
+    top: -100px;
+    right: -120px;
+  }
+  
+  .athkar__hero-orb--2 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #D4A843 0%, transparent 70%);
+    bottom: -80px;
+    left: -100px;
+    opacity: 0.3;
+  }
+  
+  .athkar__hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(212,168,67,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,168,67,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  }
+  
+  .athkar__hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 660px;
+  }
+  
+  .athkar__greeting {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold, #D4A843);
+    margin-bottom: 20px;
+  }
+  
+  .athkar__headline {
+    font-family: "Amiri", Georgia, serif;
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text, #EEF4F0);
+    margin-bottom: 20px;
+  }
+  
+  .athkar__headline-brand {
+    background: linear-gradient(120deg, var(--gold, #D4A843) 0%, var(--gold-light, #F0C870) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .athkar__sub {
+    font-size: clamp(14px, 1.8vw, 17px);
+    line-height: 1.7;
+    color: var(--text-2, #A8C4B2);
+  }
+  
+  .athkar__content {
+    padding: 0 0 80px;
+  }
+  
+  .athkar__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .athkar__category {
+    background: var(--bg-2, #0B1F14);
+    border: 1px solid var(--border, rgba(212, 168, 67, 0.14));
+    border-radius: var(--radius-md, 16px);
+    overflow: hidden;
+    transition: border-color 0.25s;
+  }
+  
+  .athkar__category:hover {
+    border-color: rgba(212, 168, 67, 0.25);
+  }
+  
+  .athkar__category-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 28px;
+    background: none;
+    border: none;
+    color: var(--text, #EEF4F0);
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    transition: background 0.2s;
+  }
+  
+  .athkar__category-header:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  
+  .athkar__category-header--active {
+    background: rgba(212, 168, 67, 0.06);
+    border-bottom: 1px solid var(--border, rgba(212, 168, 67, 0.14));
+  }
+  
+  .athkar__category-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  
+  .athkar__category-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .athkar__category-title {
+    font-family: "Amiri", Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text, #EEF4F0);
+    margin: 0;
+    line-height: 1.3;
+  }
+  
+  .athkar__category-count {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-3, #5A7A66);
+  }
+  
+  .athkar__category-arrow {
+    font-size: 12px;
+    color: var(--text-3, #5A7A66);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+  
+  .athkar__category-arrow--open {
+    transform: rotate(180deg);
+  }
+  
+  .athkar__category-content {
+    padding: 20px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .athkar__card {
+    background: rgba(26, 122, 80, 0.06);
+    border: 1px solid rgba(212, 168, 67, 0.08);
+    border-radius: var(--radius-sm, 10px);
+    padding: 28px;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  
+  .athkar__card--complete {
+    background: rgba(26, 122, 80, 0.12);
+    border-color: rgba(26, 122, 80, 0.3);
+  }
+  
+  .athkar__card-main {
+    margin-bottom: 20px;
+  }
+  
+  .athkar__zekr {
+    font-family: "Amiri", Georgia, serif;
+    font-size: clamp(20px, 3vw, 26px);
+    line-height: 2;
+    color: var(--gold-light, #F0C870);
+    margin-bottom: 14px;
+    direction: rtl;
+    text-align: right;
+  }
+  
+  .athkar__desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-2, #A8C4B2);
+    margin-bottom: 8px;
+  }
+  
+  .athkar__ref {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold, #D4A843);
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+  
+  .athkar__counter {
+    margin-top: 8px;
+  }
+  
+  .athkar__counter-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 3px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  
+  .athkar__counter-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green, #1A7A50) 0%, var(--green-glow, #22A86E) 100%);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+  
+  .athkar__counter-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .athkar__counter-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-2, #A8C4B2);
+    min-width: 60px;
+  }
+  
+  .athkar__counter-btn {
+    padding: 10px 20px;
+    border-radius: var(--radius-sm, 10px);
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    background: linear-gradient(135deg, var(--green, #1A7A50) 0%, var(--green-glow, #22A86E) 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(34, 168, 110, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  }
+  
+  .athkar__counter-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(34, 168, 110, 0.45);
+  }
+  
+  .athkar__counter-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+    background: rgba(26, 122, 80, 0.4);
+    box-shadow: none;
+  }
+  
+  .athkar__counter-reset {
+    padding: 8px 16px;
+    border-radius: var(--radius-sm, 10px);
+    border: 1px solid var(--border, rgba(212, 168, 67, 0.14));
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-2, #A8C4B2);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .athkar__counter-reset:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text, #EEF4F0);
+  }
+  
+  .athkar__loading {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .athkar__skeleton {
+    background: linear-gradient(90deg, var(--bg-3, #112A1C) 25%, #1a3524 50%, var(--bg-3, #112A1C) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 12px;
+  }
+  
+  .athkar__skeleton--header {
+    height: 64px;
+    width: 100%;
+  }
+  
+  .athkar__skeleton--card {
+    height: 200px;
+    width: 100%;
+    margin-top: 12px;
+  }
+  
+  .athkar__empty {
+    text-align: center;
+    padding: 60px 28px;
+    color: var(--text-3, #5A7A66);
+    font-size: 16px;
+  }
+  
+  .athkar__quote-section {
+    padding: 0 0 80px;
+  }
+  
+  .athkar__quote-card {
+    position: relative;
+    background: var(--bg-2, #0B1F14);
+    border: 1px solid var(--border, rgba(212, 168, 67, 0.14));
+    border-radius: var(--radius-lg, 24px);
+    padding: 48px 40px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .athkar__quote-card::before {
+    content: "❝";
+    position: absolute;
+    top: 20px;
+    left: 32px;
+    font-family: "Amiri", Georgia, serif;
+    font-size: 80px;
+    color: var(--gold, #D4A843);
+    opacity: 0.1;
+    line-height: 1;
+  }
+  
+  .athkar__quote-arabic {
+    font-family: "Amiri", Georgia, serif;
+    font-size: clamp(22px, 3.5vw, 32px);
+    line-height: 2;
+    color: var(--gold-light, #F0C870);
+    margin-bottom: 24px;
+    direction: rtl;
+  }
+  
+  .athkar__quote-english {
+    font-size: clamp(14px, 1.8vw, 16px);
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--text-2, #A8C4B2);
+    max-width: 650px;
+    margin: 0 auto 14px;
+  }
+  
+  .athkar__quote-ref {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold, #D4A843);
+    letter-spacing: 0.5px;
+  }
+  
+  @media (max-width: 640px) {
+    .athkar__category-header {
+      padding: 20px 20px;
+      gap: 12px;
+    }
+  
+    .athkar__category-content {
+      padding: 16px 20px 24px;
+    }
+  
+    .athkar__card {
+      padding: 22px 20px;
+    }
+  
+    .athkar__category-icon {
+      font-size: 24px;
+    }
+  
+    .athkar__category-title {
+      font-size: 18px;
+    }
+  
+    .athkar__quote-card {
+      padding: 36px 24px;
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
