@@ -1,16 +1,124 @@
-# React + Vite
+# 🕌 Iman Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Islamic companion application built with **React.js** that helps users strengthen their daily connection with Islam through Quran reading, Quran recitation, Athkar, prayer times, progress tracking, and Islamic event awareness.
 
-Currently, two official plugins are available:
+Designed with a beautiful dark theme featuring gold and green Islamic aesthetics, the application provides a seamless experience across both mobile and desktop devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+### 📖 Quran Reading
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Full-page Quran viewing
+* Tap to show/hide controls
+* Swipe navigation between pages
+* Bookmark pages for quick access
 
-## Expanding the ESLint configuration
+### 🎧 Quran Listening
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Multiple Quran reciters
+* Surah selection
+* Play/Pause controls
+* Audio seek functionality
+* Volume control
+
+### 📊 Reading Tracker
+
+* Track total Quran pages read
+* View overall reading progress percentage
+* Create custom Khatam sessions
+* Mark pages as completed for each Khatam
+* Monitor progress across multiple Khatam journeys
+
+### 🌙 Islamic Holidays
+
+* View upcoming Islamic occasions
+* Countdown timers for events
+* Status indicators for upcoming and active events
+* Filter events by category
+
+### 🤲 Athkar
+
+* Daily supplications and remembrances
+* Easy-to-browse categories
+* Quick access to essential Athkar
+
+### 🕌 Prayer Times
+
+* Daily prayer schedule
+* Clear and responsive interface
+* Easy access to prayer information
+
+---
+
+## 🛠️ Tech Stack
+
+* React.js
+* React Router
+* CSS3
+* Local Storage
+
+---
+
+## 🚀 Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/iman-hub.git
+```
+
+2. Navigate to the project directory
+
+```bash
+cd iman-hub
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Start the development server
+
+```bash
+npm start
+```
+
+5. Open your browser and visit:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+If you'd like to improve Iman Hub, feel free to:
+
+* Fork the repository
+* Create a feature branch
+* Submit a pull request
+* Report bugs or suggest new features
+
+Please ensure your code follows the existing project structure and coding style.
+
+---
+
+## 🔮 Future Plans
+
+* Quran search functionality
+* Tafsir integration
+* Multi-language support
+* Enhanced progress statistics
+* User accounts and cloud synchronization
+* Additional Islamic tools and resources
+
+---
+
+## 📄 License
+
+This project is open source and available for community use and contribution.
