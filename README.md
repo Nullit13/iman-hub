@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/logo1.png" alt="Iman Hub Logo" width="160">
+  <img src="./public/logo-no-background.png" alt="Iman Hub Logo" width="160">
 </p>
 
 <h1 align="center">🕌 Iman Hub</h1>
