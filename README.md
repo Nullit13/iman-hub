@@ -1,8 +1,18 @@
-# 🕌 Iman Hub
+<p align="center">
+  <img src="./public/logo1.png" alt="Iman Hub Logo" width="160">
+</p>
 
-A modern Islamic companion application built with **React.js** that helps users strengthen their daily connection with Islam through Quran reading, Quran recitation, Athkar, prayer times, progress tracking, and Islamic event awareness.
+<h1 align="center">🕌 Iman Hub</h1>
 
-Designed with a beautiful dark theme featuring gold and green Islamic aesthetics, the application provides a seamless experience across both mobile and desktop devices.
+<p align="center">
+  Quran • Athkar • Prayer Times • Khatam Tracker • Islamic Holidays
+</p>
+
+A modern Islamic companion application built with **React.js** that helps users strengthen their daily connection with Islam through Quran reading, recitation, Athkar, prayer times, progress tracking, and Islamic event awareness.
+
+Designed with a beautiful dark theme featuring gold and green Islamic aesthetics, Iman Hub provides a seamless experience across both mobile and desktop devices.
+
+---
 
 ## ✨ Features
 
@@ -33,20 +43,20 @@ Designed with a beautiful dark theme featuring gold and green Islamic aesthetics
 
 * View upcoming Islamic occasions
 * Countdown timers for events
-* Status indicators for upcoming and active events
+* Status indicators for active and upcoming events
 * Filter events by category
 
 ### 🤲 Athkar
 
 * Daily supplications and remembrances
-* Easy-to-browse categories
-* Quick access to essential Athkar
+* Organized categories
+* Easy-to-navigate interface
 
 ### 🕌 Prayer Times
 
 * Daily prayer schedule
-* Clear and responsive interface
-* Easy access to prayer information
+* Clean and responsive layout
+* Quick access to prayer information
 
 ---
 
@@ -64,7 +74,7 @@ Designed with a beautiful dark theme featuring gold and green Islamic aesthetics
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/iman-hub.git
+git clone https://github.com/Nullit13/iman-hub.git
 ```
 
 2. Navigate to the project directory
@@ -95,16 +105,17 @@ http://localhost:3000
 
 ## 🤝 Contributing
 
-Contributions are welcome!
+Contributions are welcome and appreciated!
 
-If you'd like to improve Iman Hub, feel free to:
+If you'd like to improve Iman Hub:
 
-* Fork the repository
-* Create a feature branch
-* Submit a pull request
-* Report bugs or suggest new features
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Commit your changes
+5. Open a pull request
 
-Please ensure your code follows the existing project structure and coding style.
+You can also submit bug reports, feature requests, and suggestions through GitHub Issues.
 
 ---
 
@@ -113,12 +124,12 @@ Please ensure your code follows the existing project structure and coding style.
 * Quran search functionality
 * Tafsir integration
 * Multi-language support
-* Enhanced progress statistics
-* User accounts and cloud synchronization
+* Cloud synchronization
+* Enhanced reading analytics
 * Additional Islamic tools and resources
 
 ---
 
-## 📄 License
+📄 License
 
-This project is open source and available for community use and contribution.
+This project is licensed under the MIT License.
